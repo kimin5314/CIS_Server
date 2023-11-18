@@ -89,6 +89,7 @@ public class StudentController extends HttpServlet {
                         resp.getWriter().write("wrong password or account");
                     }
                 } catch (Exception e) {
+                    System.err.println(e.getMessage());
                     resp.getWriter().write(e.getMessage());
                 }
                 break;

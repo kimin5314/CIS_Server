@@ -8,8 +8,6 @@ import static dao.StudentDao.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Student s = selectStudent("admin");
-        s.setOnline(false);
-        updateStudent(s);
+
     }
 }
