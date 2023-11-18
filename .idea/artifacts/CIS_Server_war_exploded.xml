@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CIS_Server:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CIS_Server_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CIS_Server" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="CIS_Server/web/Web" />
+    </root>
+  </artifact>
+</component>

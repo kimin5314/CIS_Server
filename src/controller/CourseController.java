@@ -12,7 +12,6 @@ import java.util.Map;
 
 import static util.json.JsonParser.parseRequestToMap;
 import static service.CourseService.*;
-import static service.EnrollmentService.*;
 
 @WebServlet(name = "course", urlPatterns = "/course")
 public class CourseController extends HttpServlet {
