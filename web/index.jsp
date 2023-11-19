@@ -18,7 +18,7 @@ $END$
 </body>
 <script>
     function test() {
-        fetch("http://kimin.cn:8081/CIS_Server_war/course", {
+        fetch("http://kimin.cn:8080/CIS_Server_war/course", {
             method: "GET",
         })
             .then(res => res.text())
