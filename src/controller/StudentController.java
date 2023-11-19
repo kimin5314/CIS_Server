@@ -65,7 +65,7 @@ public class StudentController extends HttpServlet {
                     register(new Student(studentName, studentNumber, admissionDate, gender, password));
                     resp.getWriter().write("success");
                 } catch (Exception e) {
-                    resp.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+                    resp.getWriter().write("duplicate student number");
                 }
                 break;
             }

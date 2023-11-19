@@ -31,11 +31,9 @@ public class CourseController extends HttpServlet {
         }
     }
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         fixCors(req, resp);
-
 
         Map<String, String> map = parseRequestToMap(req);
 

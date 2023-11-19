@@ -12,9 +12,9 @@ public class ConnectionPool {
     static String warFilePath = ConnectionPool.class.getProtectionDomain().getCodeSource().getLocation().getPath();
     private static final String CONFIG_FILE = warFilePath + "config.properties";
     private static final String DEFAULT_URL = "jdbc:mysql://localhost:3306/";
-    private static final String DEFAULT_USERNAME = "";
-    private static final String DEFAULT_PASSWORD = "";
-    private static final String DEFAULT_DATABASE = "";
+    private static final String DEFAULT_USERNAME = "kimin";
+    private static final String DEFAULT_PASSWORD = "Hjm@5314";
+    private static final String DEFAULT_DATABASE = "cis";
     private static final int DEFAULT_INIT_SIZE = 8;
     private static final int DEFAULT_MAX_SIZE = 20;
     private static final Vector<Connection> pool = new Vector<>();
