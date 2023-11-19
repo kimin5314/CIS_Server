@@ -13,27 +13,20 @@ import java.util.Map;
 import java.util.Vector;
 
 import static java.lang.Integer.parseInt;
+import static util.Util.fixCors;
 import static util.json.JsonParser.*;
-import static util.json.JsonBuilder.*;
 import static service.EnrollmentService.*;
 
 @WebServlet(name = "enrollment", urlPatterns = "/enrollment")
 public class EnrollmentController extends HttpServlet {
     @Override
-    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
-        req.setCharacterEncoding("utf-8");
-        resp.setCharacterEncoding("utf-8");
-        resp.setContentType("text/plain;charset=utf-8");
-        resp.setHeader("Access-Control-Allow-Origin", "*");
-        resp.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-        resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
-        resp.setHeader("Access-Control-Allow-Credentials", "false");
-        resp.setStatus(HttpServletResponse.SC_OK);
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        fixCors(req, resp);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doOptions(req, resp);
+        fixCors(req, resp);
 
         String studentNumber = req.getParameter("studentNumber");
         try {
@@ -49,7 +42,7 @@ public class EnrollmentController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doOptions(req, resp);
+        fixCors(req, resp);
 
         Map<String, String> map = parseRequestToMap(req);
 

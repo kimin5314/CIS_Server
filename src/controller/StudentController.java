@@ -14,25 +14,19 @@ import module.Student;
 
 import static dao.StudentDao.*;
 import static service.StudentService.*;
+import static util.Util.fixCors;
 import static util.json.JsonParser.*;
 
 @WebServlet(name = "student", urlPatterns = "/student")
 public class StudentController extends HttpServlet {
     @Override
-    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws UnsupportedEncodingException {
-        req.setCharacterEncoding("utf-8");
-        resp.setCharacterEncoding("utf-8");
-        resp.setContentType("text/plain;charset=utf-8");
-        resp.setHeader("Access-Control-Allow-Origin", "*");
-        resp.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
-        resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
-        resp.setHeader("Access-Control-Allow-Credentials", "false");
-        resp.setStatus(HttpServletResponse.SC_OK);
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        fixCors(req, resp);
     }
 
     @Override // improve: use other method to  check if admin is online
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doOptions(req, resp);
+        fixCors(req, resp);
 
         String studentNumber = req.getParameter("studentNumber");
 
@@ -55,7 +49,7 @@ public class StudentController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        doOptions(req, resp);
+        fixCors(req, resp);
 
         Map<String, String> map = parseRequestToMap(req);
 
