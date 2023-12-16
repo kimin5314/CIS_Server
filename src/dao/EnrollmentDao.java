@@ -1,6 +1,6 @@
 package dao;
 
-import module.Enrollment;
+import model.Enrollment;
 import util.pool.ConnectionPool;
 
 import java.sql.Connection;

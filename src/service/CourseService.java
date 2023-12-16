@@ -1,7 +1,7 @@
 package service;
 
-import module.Course;
-import module.Enrollment;
+import model.Course;
+import model.Enrollment;
 
 import java.util.Vector;
 

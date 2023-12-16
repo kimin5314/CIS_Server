@@ -1,6 +1,6 @@
 package service;
 
-import module.Student;
+import model.Student;
 
 import static dao.StudentDao.*;
 

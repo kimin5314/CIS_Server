@@ -5,12 +5,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.sql.Date;
 import java.util.Map;
 import java.util.Objects;
 
-import module.Student;
+import model.Student;
 
 import static dao.StudentDao.*;
 import static service.StudentService.*;

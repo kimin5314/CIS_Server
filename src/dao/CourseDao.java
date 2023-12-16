@@ -1,6 +1,6 @@
 package dao;
 
-import module.Course;
+import model.Course;
 import util.pool.ConnectionPool;
 
 import java.sql.Connection;
